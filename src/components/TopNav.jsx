@@ -3,7 +3,7 @@ import { FaBars, FaUserTie } from "react-icons/fa";
 
 const TopNav = ({title, onOpen}) => {
   return (
-    <Box px="35px">
+    <Box px="35px" bg="white">
         <HStack maxW="70rem" h="16" justify="space-between" mx="auto">
         <Icon as={FaBars} onClick={onOpen} display={{
           base: "block",

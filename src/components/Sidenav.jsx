@@ -24,7 +24,7 @@ const Sidenav = () => {
   }} w={{
     base: "full",
     lg: "16rem",
-  }} h="100vh" justify="space-between" >
+  }} h="100vh" justify="space-between" bg="white">
     <Box>
         <Heading textAlign="center" fontSize="20px" as="h1" pt="3.5rem">@ChakraProject</Heading>
         <Box mt="6" mx="3">
