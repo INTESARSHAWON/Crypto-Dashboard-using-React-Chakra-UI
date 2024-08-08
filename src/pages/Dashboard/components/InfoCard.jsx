@@ -1,12 +1,26 @@
-import { Tag } from "@chakra-ui/react"
+import { Tag, Text } from "@chakra-ui/react"
 import { CustomCard } from "../../../chakra/CustomCard"
 
-const InfoCard = () => {
+const InfoCard = ({imgUrl, text, tagText, inverted}) => {
   return (
-    <CustomCard>
-        <Tag bg="p.purple" color="white" borderRadius="full">
-            Lone
+    <CustomCard bgImage={imgUrl} 
+                bgSize="cover"
+                bgColor={inverted ? "p.purple" : "white"} 
+                bgRepeat="no-repeat">
+        
+        <Tag 
+            color={inverted ? "p.purple" : "white"}
+             bg={inverted ? "white" : "p.purple"} 
+             borderRadius="full">
+                {tagText}
         </Tag>
+        <Text textStyle="h5" 
+              mt="4" 
+              fontWeight="medium"
+              color= {inverted ? "white" : "black.80"}
+              >
+            {text}
+        </Text>
     </CustomCard>
   )
 }
