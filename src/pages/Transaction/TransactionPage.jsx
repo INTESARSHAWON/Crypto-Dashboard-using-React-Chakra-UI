@@ -1,9 +1,13 @@
+import { Card } from "@chakra-ui/react"
+import DashboardLayout from "../../components/DashboardLayout"
 
 const TransactionPage = () => {
   return (
-    <div>
-      <>hello</>
-    </div>
+    <DashboardLayout>
+      <Card>
+        <>hello</>
+      </Card>
+    </DashboardLayout>  
   )
 }
 

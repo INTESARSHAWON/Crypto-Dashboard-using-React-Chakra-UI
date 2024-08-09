@@ -2,6 +2,7 @@ import { Box, Heading, HStack, Icon, Stack, Text } from "@chakra-ui/react"
 import { RxDashboard } from "react-icons/rx";
 import { BsArrowDownUp } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
+import {Link} from "react-router-dom";
 
 const Sidenav = () => {
     const navLinks = [
@@ -30,24 +31,28 @@ const Sidenav = () => {
         <Box mt="6" mx="3">
             {
                 navLinks.map((nav)=> (
-                    <HStack key={nav.text} py="3" px="4" color="#797E82" borderRadius="10px" _hover={{
-                        bg:"#F3F3F7", color: "#171717"
-                    }}>
-                        <Icon as={nav.icon}/>
-                        <Text fontSize="14px" fontWeight="medium">{nav.text}</Text>
-                    </HStack>
+                    <Link to={nav.link} key={nav.text}>
+                        <HStack py="3" px="4" color="#797E82" borderRadius="10px" _hover={{
+                            bg:"#F3F3F7", color: "#171717"
+                        }}>
+                            <Icon as={nav.icon}/>
+                            <Text fontSize="14px" fontWeight="medium">{nav.text}</Text>
+                        </HStack>
+                    </Link>    
                 ))
             }
         </Box>
     </Box>    
 
     <Box mt="6" mx="3" mb="6">
-        <HStack py="3" px="4" color="#797E82" borderRadius="10px" _hover={{
-            bg:"#F3F3F7", color: "#171717"
-        }}>
-            <Icon as={BiSupport}/>
-            <Text fontSize="14px" fontWeight="medium">Support</Text>
-        </HStack>
+        <Link to="/support">        
+            <HStack py="3" px="4" color="#797E82" borderRadius="10px" _hover={{
+                bg:"#F3F3F7", color: "#171717"
+            }}>
+                <Icon as={BiSupport}/>
+                <Text fontSize="14px" fontWeight="medium">Support</Text>
+            </HStack>
+        </Link>    
     </Box>
 
   </Stack>
