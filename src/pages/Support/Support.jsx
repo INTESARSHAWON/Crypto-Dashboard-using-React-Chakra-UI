@@ -2,7 +2,7 @@
 const Support = () => {
   return (
     <div>
-      
+      <>hi</>
     </div>
   )
 }
